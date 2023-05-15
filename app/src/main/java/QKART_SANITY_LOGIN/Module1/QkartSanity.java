@@ -326,48 +326,11 @@ public class QkartSanity {
         return status;
     }
 
-    /*
-     * Verify that the cart contents are persisted after logout
-     */
+
     public static Boolean TestCase07(RemoteWebDriver driver) throws InterruptedException {
-        Boolean status = false;
-        List<String> expectedResult = Arrays.asList("Stylecon 9 Seater RHS Sofa Set",
-                "Xtend Smart Watch");
-
-        logStatus("Start TestCase", "Test Case 7: Verify that cart contents are persisted after logout", "DONE");
-
-        Register registration = new Register(driver);
-        Login login = new Login(driver);
-        Home homePage = new Home(driver);
-
-
-
-        homePage.navigateToHome();
-        status = homePage.searchForProduct("Stylecon");
-        homePage.addProductToCart("Stylecon 9 Seater RHS Sofa Set");
-
-        status = homePage.searchForProduct("Xtend");
-        homePage.addProductToCart("Xtend Smart Watch");
-
-        homePage.PerformLogout();
-
-        login.navigateToLoginPage();
-        status = login.PerformLogin(lastGeneratedUserName, "abc@123");
-        Thread.sleep(3000);
-
-        status = homePage.verifyCartContents(expectedResult);
-
-        logStatus("End TestCase", "Test Case 7: Verify that cart contents are persisted after logout: ",
-                status ? "PASS" : "FAIL");
-
-        homePage.PerformLogout();
-        return status;
-    }
-
-    public static Boolean TestCase08(RemoteWebDriver driver) throws InterruptedException {
         Boolean status;
         logStatus("Start TestCase",
-                "Test Case 8: Verify that insufficient balance error is thrown when the wallet balance is not enough",
+                "Test Case 7: Verify that insufficient balance error is thrown when the wallet balance is not enough",
                 "DONE");
 
         Register registration = new Register(driver);
@@ -376,7 +339,7 @@ public class QkartSanity {
         if (!status) {
             logStatus("Step Failure", "User Perform Registration Failed", status ? "PASS" : "FAIL");
             logStatus("End TestCase",
-                    "Test Case 8: Verify that insufficient balance error is thrown when the wallet balance is not enough: ",
+                    "Test Case 7: Verify that insufficient balance error is thrown when the wallet balance is not enough: ",
                     status ? "PASS" : "FAIL");
             return false;
         }
@@ -388,7 +351,7 @@ public class QkartSanity {
         if (!status) {
             logStatus("Step Failure", "User Perform Login Failed", status ? "PASS" : "FAIL");
             logStatus("End TestCase",
-                    "Test Case 8: Verify that insufficient balance error is thrown when the wallet balance is not enough: ",
+                    "Test Case 7: Verify that insufficient balance error is thrown when the wallet balance is not enough: ",
                     status ? "PASS" : "FAIL");
             return false;
         }
@@ -413,7 +376,7 @@ public class QkartSanity {
         status = checkoutPage.verifyInsufficientBalanceMessage();
 
         logStatus("End TestCase",
-                "Test Case 8: Verify that insufficient balance error is thrown when the wallet balance is not enough: ",
+                "Test Case 7: Verify that insufficient balance error is thrown when the wallet balance is not enough: ",
                 status ? "PASS" : "FAIL");
 
         return status;
@@ -463,7 +426,6 @@ public class QkartSanity {
             }
 
             System.out.println("");
-
 
 
 

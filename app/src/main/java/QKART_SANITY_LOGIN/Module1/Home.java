@@ -138,9 +138,20 @@ public class Home {
      */
     public Boolean verifyCartContents(List<String> expectedCartContents) {
         try {
+            WebElement cartParent = driver.findElement(By.className("cart"));
+            List<WebElement> cartContents = cartParent.findElements(By.className("css-zgtx0t"));
 
+            ArrayList<String> actualCartContents = new ArrayList<String>() {
+            };
+            for (WebElement cartItem : cartContents) {
+                actualCartContents.add(cartItem.findElement(By.className("css-1gjj37g")).getText().split("\n")[0]);
+            }
 
-
+            for (String expected : expectedCartContents) {
+                if (!actualCartContents.contains(expected)) {
+                    return false;
+                }
+            }
 
             return true;
 
