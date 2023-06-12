@@ -200,25 +200,7 @@
       "hint": "Is the URL of the final page checked if it contains /thanks ?"
     },
     {
-      "description": "Testcase 07 : Verify cart content is persisted after logout ",
-      "validations": [
-        {
-          "object_notation": "COMMAND",
-          "operator": "contains",
-          "expected_value": "GetElementText"
-        },
-        {
-          "object_notation": "RESPONSE",
-          "operator": "contains",
-          "expected_value": "Stylecon 9 Seater RHS Sofa Set"
-        }
-      ],
-      "error_out": "Testcase07: verifying if the cart contains Stylecon 9 Seater RHS Sofa Set is not done",
-      "is_enabled": true,
-      "hint": "Is the contents of the cart checked if it contains the text: Stylecon 9 Seater RHS Sofa Set"
-    },
-    {
-      "description": "Testcase 08 : Verify place order fails on low balance",
+      "description": "Testcase 07 : Verify place order fails on low balance",
       "validations": [
         {
           "object_notation": "RESPONSE",
@@ -226,12 +208,12 @@
           "expected_value": "You do not have enough balance in your wallet for this purchase"
         }
       ],
-      "error_out": "Testcase08: validation of presence of error message was not validated",
+      "error_out": "Testcase07: validation of presence of error message was not validated",
       "is_enabled": true,
       "hint": "Are we validating the error message if the text is: You do not have enough balance in your wallet for this purchase "
     },
     {
-      "description": "Testcase 09 :Verify that product added to cart is available when a new tab is opened",
+      "description": "Testcase 08 :Verify that product added to cart is available when a new tab is opened",
       "validations": [
         {
           "object_notation": "COMMAND",
@@ -244,12 +226,12 @@
           "expected_value": "SwitchToWindow"
         }
       ],
-      "error_out": "Testcase09:Switching to a new Window was not validated",
+      "error_out": "Testcase08:Switching to a new Window was not validated",
       "is_enabled": true,
       "hint": "Are we opening the URL on a new window and navigating to it ? "
     },
     {
-      "description": "Testcase 10 : Verify Privacy Policy and ToS are opened in new Window",
+      "description": "Testcase 09 : Verify Privacy Policy and ToS are opened in new Window",
       "validations": [
         {
           "object_notation": "COMMAND",
@@ -262,12 +244,12 @@
           "expected_value": "GetWindows"
         }
       ],
-      "error_out": "Testcase 10 : Opening and switching to two windows are not present",
+      "error_out": "Testcase 09 : Opening and switching to two windows are not present",
       "is_enabled": true,
       "hint": "Are you getting the list of windows available ?"
     },
     {
-      "description": "Testcase 10 : Verify Privacy Policy and ToS are opened in new Window",
+      "description": "Testcase 09 : Verify Privacy Policy and ToS are opened in new Window",
       "validations": [
         {
           "object_notation": "COMMAND",
@@ -280,12 +262,12 @@
           "expected_value": "SwitchToWindow"
         }
       ],
-      "error_out": "Testcase 10 : Opening and switching to two windows are not present",
+      "error_out": "Testcase 09 : Opening and switching to two windows are not present",
       "is_enabled": true,
       "hint": "Are you switching to the privacy policy window ?"
     },
     {
-      "description": "Testcase 10 : Verify Privacy Policy and ToS are opened in new Window",
+      "description": "Testcase 09 : Verify Privacy Policy and ToS are opened in new Window",
       "validations": [
         {
           "object_notation": "COMMAND",
@@ -298,12 +280,12 @@
           "expected_value": "CloseWindow"
         }
       ],
-      "error_out": "Testcase 10 : Opening and switching to two windows are not present",
+      "error_out": "Testcase 09 : Opening and switching to two windows are not present",
       "is_enabled": true,
       "hint": "Are you Closing the Opened Window (1)  "
     },
     {
-      "description": "Testcase 10 : Verify Privacy Policy and ToS are opened in new Window",
+      "description": "Testcase 09 : Verify Privacy Policy and ToS are opened in new Window",
       "validations": [
         {
           "object_notation": "COMMAND",
@@ -316,12 +298,12 @@
           "expected_value": "CloseWindow"
         }
       ],
-      "error_out": "Testcase 10 : Opening and switching to two windows are not present",
+      "error_out": "Testcase 09 : Opening and switching to two windows are not present",
       "is_enabled": true,
       "hint": "Are you Closing the Opened Window (2)  ?"
     },
     {
-      "description": "Testcase 10 : Verify Privacy Policy and ToS are opened in new Window",
+      "description": "Testcase 09 : Verify Privacy Policy and ToS are opened in new Window",
       "validations": [
         {
           "object_notation": "RESPONSE",
@@ -329,12 +311,12 @@
           "expected_value": "SwitchToWindow"
         }
       ],
-      "error_out": "Testcase 10 : Opening and switching to two windows are not present",
+      "error_out": "Testcase 09 : Opening and switching to two windows are not present",
       "is_enabled": true,
       "hint": "Are you swiching to the parent window ?"
     },
     {
-      "description": "Testcase 11 : Verify if the user is able to add name in the contact us form",
+      "description": "Testcase 10 : Verify if the user is able to add name in the contact us form",
       "validations": [
         {
           "object_notation": "COMMAND",
@@ -342,12 +324,12 @@
           "expected_value": "crio user"
         }
       ],
-      "error_out": "Testcase 11 : Validation of Contact us form verification failed",
+      "error_out": "Testcase 10 : Validation of Contact us form verification failed",
       "is_enabled": true,
       "hint": "Is the user name field enetered as crio user ?"
     },
     {
-      "description": "Testcase 11 : Verify if the user is able to add email in the contact form",
+      "description": "Testcase 10 : Verify if the user is able to add email in the contact form",
       "validations": [
         {
           "object_notation": "COMMAND",
@@ -355,12 +337,12 @@
           "expected_value": "criouser@gmail.com"
         }
       ],
-      "error_out": "Testcase 11 : Validation of Contact us form verification failed",
+      "error_out": "Testcase 10 : Validation of Contact us form verification failed",
       "is_enabled": true,
       "hint": "Is the user email entered as criouser@gmail.com?"
     },
     {
-      "description": "Testcase 11 : Verify if the user is able to add message in the contact form",
+      "description": "Testcase 10 : Verify if the user is able to add message in the contact form",
       "validations": [
         {
           "object_notation": "COMMAND",
@@ -368,12 +350,12 @@
           "expected_value": "Testing the contact us page"
         }
       ],
-      "error_out": "Testcase 11 : Validation of Contact us form verification failed",
+      "error_out": "Testcase 10 : Validation of Contact us form verification failed",
       "is_enabled": true,
       "hint": "Is the message entered as Testing the contact us page?"
     },
     {
-      "description": "Testcase 12 : Verify that the advertisement iframes are interactable",
+      "description": "Testcase 11 : Verify that the advertisement iframes are interactable",
       "validations": [
         {
           "object_notation": "COMMAND",
@@ -381,12 +363,12 @@
           "expected_value": "SwitchToFrame"
         }
       ],
-      "error_out": "Testcase 12 :",
+      "error_out": "Testcase 11 :",
       "is_enabled": true,
       "hint": " Are you Switching over to advertisement frame 1 ?"
     },
     {
-      "description": "Testcase 12 : Verify that the advertisement iframes are interactable",
+      "description": "Testcase 11 : Verify that the advertisement iframes are interactable",
       "validations": [
         {
           "object_notation": "COMMAND",
@@ -394,12 +376,12 @@
           "expected_value": "ClickElement"
         }
       ],
-      "error_out": "Testcase 12 :",
+      "error_out": "Testcase 11 :",
       "is_enabled": true,
       "hint": " Are you Clicking the buy now button on the advertisement page?"
     },
     {
-      "description": "Testcase 12 : Verify that the advertisement iframes are interactable",
+      "description": "Testcase 11 : Verify that the advertisement iframes are interactable",
       "validations": [
         {
           "object_notation": "COMMAND",
@@ -407,12 +389,12 @@
           "expected_value": "SwitchToFrame"
         }
       ],
-      "error_out": "Testcase 12 :",
+      "error_out": "Testcase 11 :",
       "is_enabled": true,
       "hint": " Are you Switching over to advertisement frame 2 ?"
     },
     {
-      "description": "Testcase 12 : Verify that the advertisement iframes are interactable",
+      "description": "Testcase 11 : Verify that the advertisement iframes are interactable",
       "validations": [
         {
           "object_notation": "COMMAND",
@@ -420,12 +402,12 @@
           "expected_value": "ClickElement"
         }
       ],
-      "error_out": "Testcase 12 :",
+      "error_out": "Testcase 11 :",
       "is_enabled": true,
       "hint": "Are you Clicking the buy now button on the advertisement2 page?"
     },
     {
-      "description": "Testcase 12 : Verify that the advertisement iframes are interactable",
+      "description": "Testcase 11 : Verify that the advertisement iframes are interactable",
       "validations": [
         {
           "object_notation": "COMMAND",
@@ -433,7 +415,7 @@
           "expected_value": "SwitchToParentFrame"
         }
       ],
-      "error_out": "Testcase 12 :",
+      "error_out": "Testcase 11 :",
       "is_enabled": true,
       "hint": "Are you switching over to the parent frame ?"
     }

@@ -382,9 +382,14 @@ public class QkartSanity {
         return status;
     }
 
-    public static Boolean TestCase09(RemoteWebDriver driver) throws InterruptedException {
+    public static Boolean TestCase08(RemoteWebDriver driver) throws InterruptedException {
         Boolean status = false;
 
+        return status;
+    }
+
+    public static Boolean TestCase9(RemoteWebDriver driver) throws InterruptedException {
+        Boolean status = false;
         return status;
     }
 
@@ -394,11 +399,6 @@ public class QkartSanity {
     }
 
     public static Boolean TestCase11(RemoteWebDriver driver) throws InterruptedException {
-        Boolean status = false;
-        return status;
-    }
-
-    public static Boolean TestCase12(RemoteWebDriver driver) throws InterruptedException {
         Boolean status = false;
         return status;
     }
