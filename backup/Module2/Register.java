@@ -62,17 +62,8 @@ public class Register {
         // Click the register now button
         register_now_button.click();
         // Wait for registration to complete
-        // Thread.sleep(3000);
+        Thread.sleep(3000);
 
-        // SLEEP_STMT_06: Wait for new user to get created in the backend
-        try {
-            WebDriverWait wait = new WebDriverWait(driver, 30);
-            wait.until(ExpectedConditions.or(
-                    ExpectedConditions.urlToBe("https://crio-qkart-frontend-qa.vercel.app/login")));
-        } catch (TimeoutException e) {
-            return false;
-        }
-        
         this.lastGeneratedUsername = test_data_username;
 
         return this.driver.getCurrentUrl().endsWith("/login");

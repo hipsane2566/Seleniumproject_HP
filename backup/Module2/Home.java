@@ -206,18 +206,17 @@ public class Home {
      */
     public Boolean verifyCartContents(List<String> expectedCartContents) {
         try {
-            WebElement cartParent = driver.findElement(By.xpath("//*[@class='MuiBox-root css-zgtx0t']"));
-            List<WebElement> cartContents = driver.findElements(By.xpath("//*[@class='MuiBox-root css-1gjj37g']/div[1]"));
+            WebElement cartParent = driver.findElement(By.className("cart"));
+            List<WebElement> cartContents = cartParent.findElements(By.className("css-zgtx0t"));
 
             ArrayList<String> actualCartContents = new ArrayList<String>() {
             };
             for (WebElement cartItem : cartContents) {
-                actualCartContents.add(cartItem.getText().split("\n")[0]);
+                actualCartContents.add(cartItem.findElement(By.className("css-1gjj37g")).getText().split("\n")[0]);
             }
 
             for (String expected : expectedCartContents) {
-                // To trim as getText() trims cart item title
-                if (!actualCartContents.contains(expected.trim())) {
+                if (!actualCartContents.contains(expected)) {
                     return false;
                 }
             }
