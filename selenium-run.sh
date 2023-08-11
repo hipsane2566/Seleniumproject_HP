@@ -2,6 +2,19 @@
 # Stop the existing the zalenium docker container if its runnning
 sudo docker stop zalenium
 
+# remove any screenshots to free up workspace memory
+
+if [ -d "Screenshots" ]; then
+    rm -r "Screenshots"
+    echo "Removed Screenshots"
+fi
+
+if [ -d "screenshots" ]; then
+    rm -r "screenshots"
+    echo "Removed screenshots"
+fi
+
+
 # Start the zalenium docker container in 8082 port
 sudo /usr/bin/docker run -d --rm -i --name zalenium -p 8082:4444 \
       -v /var/run/docker.sock:/var/run/docker.sock \
